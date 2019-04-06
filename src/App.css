@@ -1,33 +1,101 @@
-.App {
+@keyframes floatBoo {
+  0% {left: 0px; bottom: -50px;}
+
+  15% {left: -80px; bottom: -80px;}
+
+  45% {left: 20px; bottom: -120px;}
+
+  75% {left: 80px; bottom: -100px;}
+
+  90%{left: 100px; bottom: -60px;}
+
+  100% {left: 0px; bottom: -50px;}
+}
+
+@keyframes floatShadow {
+  0% {left: 0px; bottom: 0px; transform: scale(1)}
+
+  15% {left: -80px; bottom: 0px; transform: scale(1.1)}
+
+  45% {left: 20px; bottom: 0px; transform: scale(1.3)}
+
+  75% {left: 80px; bottom: 0px; transform: scale(1.25)}
+
+  90% {left: 100px; bottom: 0px; transform: scale(1.05)}
+
+  100% {left: 0px; bottom: 0px; transform: scale(1)}
+}
+
+container{
+
+
   text-align: center;
+  /* color: pink; */
+  /* max-width: 1000px; */
+
+} 
+ 
+  
+
+
+.boo{
+  z-index: 1;
+  animation: floatBoo 10s ease-in-out 0s infinite;
+  position: relative;
+  /* display: block; */
+  /* margin: 0 auto; */
+  /* max-width: 30%;
+  max-height: 30%; */
+}
+.shadow{
+  animation: floatShadow 10s ease-in-out 0s infinite;
+  position: relative;
+  z-index: -1;
+  top: 100px;
+  /* display: block; */
+  /* margin: 0 auto; */
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+
+.shadowFadeIn{
+  /* float: left; */
+  /* text-align: center; */
+  /* text-align: center; */
+  /* padding: 80px; */
+  opacity: .2;
+  transition: opacity 0.5s 0.59s;
+}
+.shadowFadeOut{
+  /* float: left; */
+  /* text-align: center; */
+  /* padding: 80px; */
+  opacity: .05;
+  transition: opacity 0.5s 0.57s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+.fadeOut{
+  max-width: 30%;
+  max-height: 30%; 
+  /* text-align: center;  */
+  /* color: pink; */
+  opacity:.4;
 
-.App-link {
-  color: #61dafb;
-}
+  transition: opacity 0.5s 0.5s;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.fadeIn{
+  max-width: 30%;
+  max-height: 30%; 
+  /* text-align: center; */
+  /* color: pink; */
+  opacity:1;
+
+  transition: opacity 0.5s 0.5s;
+
+}
+h5{
+  z-index: 2;
+  color: pink;
+  position: relative;
+  text-align: center;
 }
